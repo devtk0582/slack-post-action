@@ -1,0 +1,14 @@
+name: 'Slack Post'
+description: 'Post messages to Slack'
+inputs:
+  SLACK_WEBHOOK:  
+    description: 'Slack Webhook Url'
+    required: true
+    default: ''
+  MESSAGE:  
+    description: 'Message to send'
+    required: true
+    default: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
