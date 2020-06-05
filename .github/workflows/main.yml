@@ -1,0 +1,14 @@
+name: CI
+
+on: [push]
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    name: Send Test Text To Slack
+    steps:
+    - name: Send Text
+      uses: actions/slack-post-action@v1.0
+      with:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        MESSAGE: "GO TEST" 
