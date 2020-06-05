@@ -13,7 +13,8 @@ Simple GitHub Action To Send Slack Message
 
 ## Example usage
 
-uses: actions/slack-post-action@v1
+uses: devtk0582/slack-post-action@v1.0
+
 with:
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
   MESSAGE: "Success"
