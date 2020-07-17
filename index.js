@@ -10,7 +10,7 @@ try {
       console.log('Invalid input');
   } else {
 
-    // blah
+    // blah test
 
     const webHookPayload = github.context.payload;
     //const messageToSend = "";
