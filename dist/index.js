@@ -1969,6 +1969,12 @@ try {
   if (!slackWebhookUrl || !message) {
       console.log('Invalid input');
   } else {
+
+    const webHookPayload = github.context.payload;
+    //const messageToSend = "";
+
+    console.log(webHookPayload);
+
     const options = {
         url: slackWebhookUrl,
         json: true,
