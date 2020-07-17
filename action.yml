@@ -1,8 +1,8 @@
-name: 'Slack Post'
-description: 'Post messages to Slack'
+name: 'Teamwork Chat Post'
+description: 'Post messages to Teamwork Chat'
 inputs:
   SLACK_WEBHOOK:  
-    description: 'Slack Webhook Url'
+    description: ''
     required: true
     default: ''
   MESSAGE:  
@@ -11,7 +11,7 @@ inputs:
     default: ''
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'index.js'
 branding:
   icon: 'cast'  
   color: 'blue'

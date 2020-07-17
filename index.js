@@ -13,7 +13,7 @@ try {
         url: slackWebhookUrl,
         json: true,
         body: {
-            text: message
+            body: message
         }
     };
     
