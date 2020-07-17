@@ -16,6 +16,9 @@ try {
             body: message
         }
     };
+
+    console.log("Posting message: '" + message + "'");
+    console.log(JSON.stringify(options));
     
     request.post(options, (err, res, body) => {
         if (err) {
