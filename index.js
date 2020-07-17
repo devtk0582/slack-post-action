@@ -1,10 +1,10 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
-const request = require('request');
+import { getInput, setFailed } from '@actions/core';
+import github from '@actions/github';
+import { post } from 'request';
 
 try {
-  const slackWebhookUrl = core.getInput('SLACK_WEBHOOK');
-  const message = core.getInput('MESSAGE');
+  const slackWebhookUrl = getInput('SLACK_WEBHOOK');
+  const message = getInput('MESSAGE');
 
   if (!slackWebhookUrl || !message) {
       console.log('Invalid input');
@@ -20,7 +20,7 @@ try {
     console.log("Posting message: '" + message + "'");
     console.log(JSON.stringify(options));
     
-    request.post(options, (err, res, body) => {
+    post(options, (err, res, body) => {
         if (err) {
             return console.log(err);
         }
@@ -29,5 +29,5 @@ try {
     });
   }
 } catch (error) {
-  core.setFailed(error.message);
+  setFailed(error.message);
 }
